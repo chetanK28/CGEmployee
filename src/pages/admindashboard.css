@@ -1,0 +1,224 @@
+/* 🌙 Dark Theme Styles */
+:root {
+    --primary-color: #1e1e2d;
+    --secondary-color: #25273c;
+    --accent-color: #4caf50;
+    --danger-color: #ff4d4d;
+    --text-color: #ffffff;
+    --text-secondary: #b3b3b3;
+    --card-bg: #2a2d3e;
+    --card-hover: #343851;
+    --table-header: #3c3f58;
+    --gradient-primary: linear-gradient(135deg, #1d2b64, #f8cdda);
+    --gradient-success: linear-gradient(135deg, #4caf50, #6bbf59);
+  }
+  
+  /* 🌍 Global Styles */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 📊 Dashboard Container */
+  .dashboard-container {
+    padding: 20px;
+    background-color: #1e1e2d;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  /* 🏆 Dashboard Title */
+  .dashboard-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* 📈 Statistics Cards */
+  .stat-card {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* 🎨 Card Gradient Hover Effect */
+  .stat-card:hover {
+    background: var(--gradient-primary);
+    transform: scale(1.05);
+    color: #190202;
+  }
+  
+  /* 🌟 Statistic Text */
+  .stat-card h5 {
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stat-card h5::before {
+    content: "🔥";
+    font-size: 1.5rem;
+    margin-right: 8px;
+  }
+  
+  .stat-card .stat-change {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-top: 5px;
+  }
+  
+  /* 📊 Charts Section */
+  .charts-section {
+    margin-top: 30px;
+  }
+  
+  /* 🏦 Debit & Credit Chart */
+  .chart-container {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* 📊 Chart Titles */
+  .chart-title {
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* 📊 Transaction Table */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  /* 💳 Table Header */
+  .table thead {
+    background: var(--table-header);
+    color: var(--text-color);
+    font-size: 1rem;
+  }
+  
+  .table th, .table td {
+    padding: 14px;
+    text-align: center;
+  }
+  
+  .table tbody tr {
+    background: var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .table tbody tr:hover {
+    background: var(--card-hover);
+  }
+  
+  /* 📊 Transaction Status Badges */
+  .badge {
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  
+  .bg-success {
+    background: var(--gradient-success);
+    color: #fff;
+  }
+  
+  .bg-warning {
+    background: #ffc107;
+    color: #222;
+  }
+  
+  .bg-danger {
+    background: var(--danger-color);
+    color: white;
+  }
+  
+  /* 🛠️ Buttons */
+  button {
+    background: var(--accent-color);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+  }
+  
+  button:hover {
+    background: #3da940;
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+    background: #2e7d32;
+  }
+  
+  /* 📱 Responsive Design */
+  @media (max-width: 992px) {
+    .dashboard-container {
+        padding: 15px;
+    }
+  
+    .stat-card {
+        padding: 15px;
+    }
+  
+    .table th, .table td {
+        padding: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-title {
+        font-size: 1.8rem;
+    }
+  
+    .stat-card h5 {
+        font-size: 1.5rem;
+    }
+  
+    .table th, .table td {
+        font-size: 0.9rem;
+    }
+  }
+  
+  /* 🎭 Smooth Fade In Animation */
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  

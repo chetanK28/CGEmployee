@@ -1,0 +1,196 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 20px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  height: 100vh; /* Full viewport height */
+  width: 250px; /* Sidebar width */
+  background-color: #1e1e2d; /* Blue background */
+  color: white; /* Text color */
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease-in-out;
+  border-right: 3px solid rgba(255, 255, 255, 0.4); /* Adds a white line with transparency */
+  box-shadow: 4px 0px 10px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+}
+
+/* Effect: White Line Glows on Hover */
+.sidebar:hover {
+  border-right: 4px solid rgba(255, 255, 255, 0.8); /* Enhances glow effect */
+  box-shadow: 6px 0px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Sidebar Collapsed State */
+.sidebar.collapsed {
+  width: 80px;
+  border-right: 2px solid rgba(255, 255, 255, 0.3); /* Keep border when collapsed */
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ✨ Fancy Logo with White Glow Effect */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(45deg, #f4f4f4, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, text-shadow 0.3s;
+}
+
+/* Hover Effect for Logo */
+.logo:hover {
+  transform: scale(1.1);
+  text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Sidebar Toggle Button */
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Profile Section */
+.profile {
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  border: 2px solid white;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Sidebar Menu */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Menu Items */
+.menu li {
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Menu Item Hover Effect */
+.menu li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-right: 3px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Sidebar Links */
+.menu a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar.collapsed {
+    width: 70px;
+  }
+}
+
+
+/* Topbar Styles */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e2d;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.4); /* Adds a white line at the bottom */
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+}
+
+/* Effect: White Line Glows on Hover */
+.topbar:hover {
+  border-bottom: 4px solid rgba(255, 255, 255, 0.8); /* Enhances glow effect */
+  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Topbar Icons */
+.topbar-icons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Topbar Buttons */
+.topbar-icons button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for Buttons */
+.topbar-icons button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .topbar {
+    padding: 8px 15px;
+  }
+
+  .topbar-icons button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}

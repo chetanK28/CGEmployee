@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+  }
+  
+  .dashboard-container {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* h1, h2 {
+    color: #333;
+  } */
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Account Balances Section */
+  .account-balance-section {
+    margin-bottom: 20px;
+  }
+  
+  .accounts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .account-card {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .account-card h3 {
+    margin-bottom: 10px;
+  }
+  
+  .account-card p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Transactions Section */
+  .transactions-section {
+    margin-bottom: 20px;
+  }
+  
+  .transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .transactions-table th, .transactions-table td {
+    border: 1px solid #ddd;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .transactions-table th {
+    background-color: #007bff;
+    color: rgb(3, 0, 0);
+  }
+  
+  .transactions-table td.negative {
+    color: #e63946;
+  }
+  
+  .transactions-table td.positive {
+    color: #2a9d8f;
+  }
+  
+  /* Financial Summary Section */
+  .financial-summary {
+    margin-bottom: 20px;
+  }
+  
+  .summary-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .summary-card {
+    background-color: #fff;  /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: #000;  /* Black text color */
+}
+
+.summary-card h3 {
+    margin-bottom: 10px;
+    color: #000; /* Black text color */
+}
+
+.summary-card p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000; /* Black text color */
+}
+
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .accounts {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .summary-cards {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .account-card {
+      width: 100%;
+    }
+  }
+  
